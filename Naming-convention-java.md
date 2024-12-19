@@ -2,7 +2,9 @@
 
 ## General Rules
 **Consistency is key**: Follow the same pattern throughout the project.
+
 **Descriptive and concise**: Names should clearly convey their purpose.
+
 **Case style**: Follow the appropriate case style based on the context:
   -'camelCase':For variables and methods in java.
   -'PascalCase':For Class names in java.
@@ -27,6 +29,8 @@
 String userName="RanisaRout";
 final MAX_CONNECTIONS=2;
 
+**Example**
+```java
 //Method naming
 public int calculateTotal(int price, int quantity){
 return price*quantity;
@@ -45,3 +49,4 @@ public void displayBalance(){
 System.out.println("User:"+userName+",Balance:$"+balance);
 }
 }
+```
