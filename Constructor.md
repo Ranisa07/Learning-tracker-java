@@ -64,7 +64,9 @@ public class Main{
 }
 ```
 **OUTPUT**
-![alt text](<Screenshot 2025-01-02 215405-1.png>)
+
+![Screenshot 2025-01-02 215405](https://github.com/user-attachments/assets/53c8f1f6-5d6f-4140-a73c-9d2a9ba5d3e7)
+
 
 **Key Points**
 
@@ -118,7 +120,8 @@ public class Main{
 }
 ```
 **OUTPUT**
-![alt text](<Screenshot 2025-01-02 215955.png>)
+![Screenshot 2025-01-02 215955](https://github.com/user-attachments/assets/1764640e-0d43-43ec-87c4-d36451974be5)
+
 
 **Key Points**
 
@@ -167,7 +170,8 @@ public class Main{
 }
 ```
 **OUTPUT**
-![alt text](<Screenshot 2025-01-02 225221.png>)
+![Screenshot 2025-01-02 225221](https://github.com/user-attachments/assets/75f99fd0-4131-4de6-ab69-b01a8f829045)
+
 
 ## Using `this` in a Parameterized Constructor
 
@@ -196,7 +200,8 @@ public class Main{
 }
 ```
 **OUTPUT**
-![alt text](<Screenshot 2025-01-02 225607.png>)
+![Screenshot 2025-01-02 225607](https://github.com/user-attachments/assets/cf1769b8-1b0f-41a1-b896-5501318c4ed0)
+
 
 **Key Points**
 
