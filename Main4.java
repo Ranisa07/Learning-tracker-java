@@ -1,3 +1,4 @@
+package src.code.com.java.example;
 // Abstract class Animal
 abstract class Animal {
     // Abstract method: No implementation here, subclasses must provide one

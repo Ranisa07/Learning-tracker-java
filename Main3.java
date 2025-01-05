@@ -1,4 +1,7 @@
- interface Animal {
+package src.code.com.java.example;
+import Animal;
+
+interface Animal {
     void sound();
     void eat();
     

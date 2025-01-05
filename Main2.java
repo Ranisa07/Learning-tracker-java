@@ -1,5 +1,7 @@
+package src.code.com.java.example;
 // Define an interface called Animal
- interface Animal {
+
+interface Animal {
     // Abstract method (does not have a body)
     void sound();
 

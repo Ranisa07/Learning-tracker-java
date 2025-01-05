@@ -1,3 +1,4 @@
+package src.code.com.java.example;
 public class StaticNonStaticExample{
     //Static field: belongs to the class
     static String staticField="I am a static field";

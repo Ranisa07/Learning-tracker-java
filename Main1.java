@@ -1,3 +1,4 @@
+package src.code.com.java.example;
 class Calculator {
     
     // Method to add two integers
