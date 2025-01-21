@@ -1,7 +1,5 @@
 package src.java.com.arrays;
 
-import java.util.Arrays;
-
 public class MissingAndDuplicate {
     public static void findUsingVisitedArray(int[] nums) {
         int n = nums.length;
@@ -27,60 +25,51 @@ public class MissingAndDuplicate {
     }
 
     public static void findUsingXOR(int[] nums) {
-        int xor = 0, n = nums.length;
-        int xor1ToN = 0;
+        int xor = 0;
 
         // XOR all elements in the array
-        for (int num : nums) {
-            xor ^= num;
+        for (int i=0;i<nums.length;i++) {
+            xor ^= nums[i];
         }
 
-        // XOR all numbers from 1 to n
-        for (int i = 1; i <= n; i++) {
-            xor1ToN ^= i;
+        // XOR all numbers from 1 to no.s of elements in array
+        for (int i = 1; i <= nums.length; i++) {
+            xor ^= i;
         }
-
-        // XOR result gives xor = missing ^ duplicate
-        int xorResult = xor ^ xor1ToN;
 
         // Find the rightmost set bit
-        int rightmostSetBit = xorResult & ~(xorResult - 1);
-
+        int rightmostSetBit = xor & -xor;           
         // Divide numbers into two groups and XOR them
         int missingOrDuplicate1 = 0, missingOrDuplicate2 = 0;
         for (int num : nums) {
-            if ((num & rightmostSetBit) != 0) {
-                missingOrDuplicate1 ^= num;
+            if ((num & rightmostSetBit) == 0) {
+            missingOrDuplicate1= missingOrDuplicate1 ^ num;
             } else {
-                missingOrDuplicate2 ^= num;
+                missingOrDuplicate2 =  missingOrDuplicate2 ^ num;
             }
         }
-        for (int i = 1; i <= n; i++) {
-            if ((i & rightmostSetBit) != 0) {
-                missingOrDuplicate1 ^= i;
+        for (int i = 1; i <= nums.length; i++) {
+            if ((i & rightmostSetBit) == 0) {
+                missingOrDuplicate1 = missingOrDuplicate1 ^ i;
             } else {
-                missingOrDuplicate2 ^= i;
+                missingOrDuplicate2 = missingOrDuplicate2 ^ i;
             }
         }
 
         // Determine which is missing and which is duplicate
-        boolean isDuplicate = false;
         for (int num : nums) {
             if (num == missingOrDuplicate1) {
-                isDuplicate = true;
-                break;
-            }
-        }
-
-        if (isDuplicate) {
             System.out.println("Duplicate: " + missingOrDuplicate1);
             System.out.println("Missing: " + missingOrDuplicate2);
-        } else {
+                break;
+            }else if(num==missingOrDuplicate2){
             System.out.println("Duplicate: " + missingOrDuplicate2);
             System.out.println("Missing: " + missingOrDuplicate1);
+            break;
+            }
         }
     }
-
+    
     public static void main(String[] args) {
         int[] nums = {4, 3, 6, 2, 1, 1};
         findUsingVisitedArray(nums);

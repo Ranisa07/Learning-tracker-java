@@ -12,7 +12,7 @@ public class ArraySorting {
         Arrays.sort(numbers, new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
-                if(o1%10 > o2%10){
+                if(o1%10 > o2%10){                     //sort array elements by its 1st digit
                 return 1; // Ascending order 
                 }
                 else{

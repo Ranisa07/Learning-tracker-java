@@ -23,7 +23,7 @@ public class Sum2DArray {
         
         //sum of 3D array matrix elements
 
-         int [][][] matrix1={{               //3D Array Initialization
+         int[][][] matrix1={{               //3D Array Initialization
                              {1,2,3},
                              {4,5,6},
                              {7,8,8}

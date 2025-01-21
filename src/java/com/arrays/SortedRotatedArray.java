@@ -4,18 +4,17 @@ public class SortedRotatedArray {
 
     // Function to check if the array is sorted and rotated
     public static boolean isSortedAndRotated(int[] arr) {
-        int n = arr.length;
         int count = 0;
 
         // Count the number of times the array is unsorted
-        for (int i = 0; i < n; i++) {
-            if (arr[i] > arr[(i + 1) % n]) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > arr[(i + 1) % arr.length] ) {
                 count++;
             }
         }
         
         // If the count is 1, it's sorted and rotated
-        return count == 1;
+        return count == 1 && arr[0] > arr[arr.length - 1];
     }
 
     public static void main(String[] args) {
@@ -24,8 +23,8 @@ public class SortedRotatedArray {
         System.out.println("Array 1 is sorted and rotated: " + isSortedAndRotated(arr1));
         
         // Example 2: Sorted but not rotated
-        int[] arr2 = {1, 2, 3, 4, 5};
-        System.out.println("Array 2 is sorted and rotated: " + isSortedAndRotated(arr2));
+       int[] arr2 = {1, 2, 3, 4, 5};
+       System.out.println("Array 2 is sorted and rotated: " + isSortedAndRotated(arr2));
         
         // Example 3: Not sorted
         int[] arr3 = {3, 5, 1, 4, 2};

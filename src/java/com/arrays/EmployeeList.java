@@ -15,18 +15,6 @@ class Employee implements Comparable<Employee>
         this.salary=salary;
     }
 
-    //Getters
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
     public String toString(){
         return "Employee {" +
                "id=" + id +
