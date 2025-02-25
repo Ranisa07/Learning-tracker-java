@@ -32,7 +32,7 @@ public class ListExample {
         queue.add(100);
         queue.add(110);
         queue.add(120);
-        System.out.println("Queue: " + queue);
+        System.out.println("Queue:" + queue);
         queue.poll();
         System.out.println("Queue after poll: " + queue);
     }
